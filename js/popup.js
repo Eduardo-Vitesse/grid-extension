@@ -1,26 +1,35 @@
 const colunas = document.getElementById('colunas')
 const largura = document.getElementById('largura')
 const margens = document.getElementById('margens')
+
 const ativar = document.getElementById('btn-ativar')
+const desativar = document.getElementById('btn-desativar')
 
-let c = 0
-let l = 0
-let m = 0
+let numColunas = 0
+let larguraColun = 0
+let space = 0
 
+// Funções para pegar o s valores dos inputs
 colunas.addEventListener('change', (event) => {
-    c = event.target.value
+    numColunas = event.target.value
 })
 
 largura.addEventListener('change', (event) => {
-    l = event.target.value
+    larguraColun = event.target.value
 })
 
 margens.addEventListener('change', (event) => {
-    m = event.target.value
+    space = event.target.value
 })
 
+// Função para atribuir os valores
 ativar.addEventListener('click', () => {
-    sendMessage({c, l, m})
+    sendMessage({numColunas, larguraColun, space})
+})
+
+// Função para zerar todos os valores
+desativar.addEventListener('click', () => {
+    sendMessage({numColunas: 0, larguraColun: 0, space: 0})
 })
 
 function sendMessage(data){
