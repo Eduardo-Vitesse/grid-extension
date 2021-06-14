@@ -2,7 +2,7 @@ const buildTheGrid = (col, lar, mar, cor) => {
     let box = document.createElement('section')
     box.id = '3f9ae322cbf74b065cf4f1918f91084c'
     box.style.width = '100%'
-    box.style.height = '100vh'
+    box.style.height = 'auto'
     box.style.backgroundColor = 'transparent'
     box.style.position = 'fixed'
     box.style.top = 0
